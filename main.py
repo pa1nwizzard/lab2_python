@@ -7,7 +7,7 @@ def f1():
     count = 0;
     combs = list(product(alph, repeat=5))
     for n in combs:
-        if n.count('Й') <= 1:
+        if (n.count('Й') <= 1) and (n[0] != 'Й') and (n[-1] != 'Й') and (n.count('ИЙ') == 0) and (n.count('ЙИ') == 0):
             count += 1
     return count
 
